@@ -77,8 +77,7 @@ class Prepare(Setup):
     def _prepare_and_validate_confstore_keys(self):
         Log.info("Prepare: Validating required configuration.")
         self.conf_store_keys.update({
-                const.KEY_HOSTNAME:f"{const.NODE}>{self.machine_id}>{const.HOSTNAME}",
-                const.KEY_CLUSTER_ID:f"{const.NODE}>{self.machine_id}>{const.CLUSTER_ID}",
+                const.KEY_CLUSTER_ID:f"{const.CLUSTER}>{const.ID}",
                 const.CONSUL_SECRET_KEY:f"{const.CONSUL_SECRET_KEY}"
                 # TODO: validate following keys once available in conf-store
                 #const.METRICS_PERF_STATS_MSG_TYPE : const.METRICS_PERF_STATS_MSG_TYPE_KEY,
